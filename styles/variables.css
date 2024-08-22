@@ -1,1 +1,74 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --main-font-family: 'Inter';
+  --secondary-font-family: 'PressStart2P';
+  --max-width: 1440px;
+  --min-width: 375px;
+  --page-width: clamp(var(--min-width, 375px), 100vw, var(--max-width, 1440px));
+  --content-max-width: 700px;
+  --content-width: clamp(var(--min-width, 375px), 100vw, var(--content-max-width, 700px));
+  --main-color: #000;
+  --accent-color: #fff;
+  --background: repeating-linear-gradient(#d3d3d3, transparent 2px),
+                repeating-linear-gradient(90deg, #d3d3d3, transparent 2px),
+                linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+  --around-color: #fff;
+  --font-weight-normal: 400;
+  --font-weight-title: 700;
+  --margin-block-page: 100px;
+  --border-size: 2px;
+  --gap-normal: 20px;
+  --padding-top-head: clamp(7.5rem, 6.6579rem + 4.2105vw, 8.5rem);
+  --font-size-title: clamp(3.0625rem, 2.2204rem + 4.2105vw, 4.0625rem);
+  --font-size-subtitle: clamp(0.875rem, 0.4013rem + 2.3684vw, 1.4375rem);
+  --card-indent: 25px;
+  --card-inline-indent: clamp(0.8125rem, -0.0529rem + 3.6923vw, 1.5625rem);
+  --font-size-medium: 14px;
+  --font-size-normal: 18px;
+  --shift-pointer: calc((var(--font-size-medium, 14px) + 0.43em) * -1);
+  --reverse-shift-pointer: calc(var(--font-size-medium, 14px) + 0.29em);
+  --nav-opacity: 0.6;
+  --watermark-opacity: 0.5;
+  --title-block-padding: 5px;
+  --title-line-padding: 10px;
+  --mix-blend-mode: hard-light;
+  --gap-large: 27px;
+  --line-height-medium: 1.17;
+  --line-height-small: 0.9;
+  --line-height-large: 1.5;
+  --button-block-padding: 10.5px;
+  --button-line-padding: 17px;
+  --gap-like-medium: 12px;
+  --duration-fast: 0.3s;
+  --duration-medium: 0.5s;
+  --pointer-translate: 4px;
+  --gap-micro: 6px;
+  --gap-mini: 8px;
+  --memory-block-padding: 15px;
+  --memory-line-padding: 18px;
+  --icon-small: 21px;
+  --icon-medium: 39px;
+  --dialog-width: clamp(21.5625rem, 20.9856rem + 2.4615vw, 22.0625rem);
+  --block-padding: 30px;
+  --inline-padding: 30px;
+  --pop-up-opacity: 0.75;
+  --flex-direction: row;
+  --button-width: 130px;
+  --heart-contour: #000;
+  --heart-sparks: #F00;
+  --heart-size: 38px;
+}
+
+@media (width <= 375px) {
+
+  .footer-button {
+    --flex-direction: column;
+  }
+
+  .footer__symbol {
+    --icon-small: 29px;
+  }
+
+  .dialog {
+  --inline-padding: 40px;
+  }
+}
