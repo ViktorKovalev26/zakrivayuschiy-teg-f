@@ -3,9 +3,9 @@
   --accent-color: #000;
   --around-color: #00CC14;
   --heart-contour: #00CC14;
-  --background: repeating-linear-gradient(#000, transparent 2px),
-                repeating-linear-gradient(90deg, #000, transparent 2px),
-                linear-gradient(to bottom, #007f0c 0.01%, #004306 100%);
+  --gradient-line: #000;
+  --gradient-light: #007f0c;
+  --gradient-dark: #004306;
   --font-weight-normal: 465;
   --font-weight-title: 785;
 }
@@ -17,9 +17,9 @@
     --accent-color: #000;
     --around-color: #00CC14;
     --heart-contour: #00CC14;
-    --background: repeating-linear-gradient(#000, transparent 2px),
-                repeating-linear-gradient(90deg, #000, transparent 2px),
-                linear-gradient(to bottom, #007f0c 0.01%, #004306 100%);
+    --gradient-line: #000;
+    --gradient-light: #007f0c;
+    --gradient-dark: #004306;
     --font-weight-normal: 465;
     --font-weight-title: 785;
   }
