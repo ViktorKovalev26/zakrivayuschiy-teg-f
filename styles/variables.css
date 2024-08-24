@@ -47,7 +47,7 @@
   --memory-line-padding: 18px;
   --icon-small: 21px;
   --icon-medium: 39px;
-  --dialog-width: clamp(20rem, 19.4107rem + 2.9464vw, 22.0625rem);
+  --dialog-width: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
   --block-padding: 30px;
   --inline-padding: 30px;
   --pop-up-opacity: 0.75;

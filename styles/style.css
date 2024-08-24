@@ -6,11 +6,10 @@
   justify-content: center;
   gap: 0;
   max-width: var(--max-width, 1440px);
-  /*width: var(--page-width, 1440px);*/
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  background-image: repeating-linear-gradient(var(--gradient-line, #d3d3d3), transparent 2px),
-      repeating-linear-gradient(90deg, var(--gradient-line, #d3d3d3), transparent 2px),
+  background-image: repeating-linear-gradient(var(--gradient-line, #d3d3d3) 0 2px, transparent 2px 4px),
+      repeating-linear-gradient(90deg, var(--gradient-line, #d3d3d3) 0 2px, transparent 2px 4px),
       linear-gradient(to bottom, var(--gradient-light, #e7e7e7) 0.01%, var(--gradient-dark, #1a1a1a) 100%);
   background-size: cover;
   background-attachment: fixed;
@@ -22,34 +21,30 @@
 .like-button {
   position: relative;
   transition: box-shadow var(--duration-fast, 0.3s);
-  
+}
 
-  &:focus-visible {
-    outline: none;
-    box-shadow: var(--border-size, 2px) var(--border-size, 2px) 0 0 var(--main-color, #000);
-  }
+.like-button:focus-visible {
+  outline: none;
+  box-shadow: var(--border-size, 2px) var(--border-size, 2px) 0 0 var(--main-color, #000);
+}
 
-  &:focus {
-    outline: none;
-  }
+.like-button:focus {
+  outline: none;
+}
 
-  &::before {
-    content: '';
-    position: absolute;
-    transform: scaleX(0);
-    background-color: var(--main-color, #000);
-    transform-origin: 0 0;
-    transition: transform var(--duration-medium, 0.5s) ease-in-out;
-    height: 100%;
-    width: 100%;
-  }
+.like-button::before {
+  content: '';
+  position: absolute;
+  transform: scaleX(0);
+  background-color: var(--main-color, #000);
+  transform-origin: 0 0;
+  transition: transform var(--duration-medium, 0.5s) ease-in-out;
+  height: 100%;
+  width: 100%;
+}
 
-  &:hover {
-
-    &::before {
-      transform: scaleX(1);
-    }
-  }
+.like-button:hover::before {
+  transform: scaleX(1);
 }
 
 .button__text {
@@ -82,14 +77,14 @@
   padding-top: var(--padding-top-head, 136px);
   align-items: center;
   font-family: var(--secondary-font-family, fantasy);
+}
 
-  &:focus {
-    outline: none;
-  }
+.logo-group:focus {
+  outline: none;
+}
 
-  &:focus-visible {
-    outline: none;
-  }
+.logo-group:focus-visible {
+  outline: none;
 }
 
 .title {
@@ -119,45 +114,45 @@
   text-transform: uppercase;
   transition: opacity var(--duration-fast, 0.3s);
   cursor: pointer;
-  
-  &::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: var(--border-size, 2px);
-    background-color: currentColor;
-    transition: width var(--duration-fast, 0.3s);
-  }
+}
 
-  &:hover {
-    opacity: var(--nav-opacity, 0.6);
-  }
+.theme-menu__button::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: var(--border-size, 2px);
+  background-color: currentColor;
+  transition: width var(--duration-fast, 0.3s);
+}
 
-  &:focus {
-    outline: none;
-  }
+.theme-menu__button:hover {
+  opacity: var(--nav-opacity, 0.6);
+}
 
-  &:focus-visible {
-    opacity: var(--nav-opacity, 0.6);
-    outline: none;
+.theme-menu__button:focus {
+  outline: none;
+}
 
-    &::after {
-      width: 100%;
-    }
-  }
+.theme-menu__button:focus-visible {
+  opacity: var(--nav-opacity, 0.6);
+  outline: none;
+}
 
-  &:disabled {
-    position: relative;
-    opacity: var(--nav-opacity, 0.6);
-    color: currentColor;
-    pointer-events: none;
+.theme-menu__button:focus-visible::after {
+  width: 100%;
+}
 
-    &::before {
-      content: '';
-      position: absolute;
-      left: var(--shift-pointer, -20px);
-    }
-  }
+.theme-menu__button:disabled {
+  position: relative;
+  opacity: var(--nav-opacity, 0.6);
+  color: currentColor;
+  pointer-events: none;
+}
+
+.theme-menu__button:disabled::before {
+  content: '';
+  position: absolute;
+  left: var(--shift-pointer, -20px);
 }
 
 .main {
@@ -297,15 +292,15 @@
   justify-content: center;
   transition: outline var(--duration-fast, 0.3s) ease;
   cursor: pointer;
+}
 
-  &:focus {
-    outline: none;
-  }
+.card__icon-button:focus {
+  outline: none;
+}
 
-  &:focus-visible {
-    outline: var(--border-size, 2px) solid var(--main-color, #000);
-    outline-offset: -2.5px;
-  }
+.card__icon-button:focus-visible {
+  outline: var(--border-size, 2px) solid var(--main-color, #000);
+  outline-offset: -2.5px;
 }
 
 .like-icon {
@@ -324,7 +319,7 @@
 
 .like-icon .core {
   fill: transparent;
-  transition: fill var(--duration-fast, 0.3s) var(--duration-fast, 0.3s) linear;
+  transition: fill var(--duration-fast, 0.3s) 0.03s linear;
 }
 
 .like-icon:hover .core {
@@ -344,12 +339,12 @@
 
 .like-icon:hover .main-body {
   fill: var(--heart-contour, #000);
-  transition: fill var(--duration-fast, 0.3s) var(--duration-medium, 0.5s) linear;
+  transition: fill var(--duration-fast, 0.3s) 0.05s linear;
 }
 
 .like-icon:active .main-body {
   fill: var(--heart-sparks, #F00);
-  transition: fill var(--duration-fast, 0.3s) var(--duration-medium, 0.5s) linear;
+  transition: fill var(--duration-fast, 0.3s) 0.05s linear;
 }
 
 .like-icon.is-liked .core {
@@ -359,12 +354,12 @@
 
 .like-icon.is-liked .main-body {
   fill: var(--heart-sparks, #F00);
-  transition: fill var(--duration-fast, 0.3s) var(--duration-fast, 0.3s) ease-in;
+  transition: fill var(--duration-fast, 0.3s) 0.05s ease-in;
 }
 
 .like-icon.is-liked .contour {
   fill: var(--heart-sparks, #F00);
-  transition: fill var(--duration-fast, 0.3s) calc(var(--duration-fast, 0.3s) * 2) ease-in;
+  transition: fill var(--duration-fast, 0.3s) 0.06s ease-in;
 }
 
 .card__like-button {
@@ -378,15 +373,15 @@
   transition: box-shadow var(--duration-fast, 0.3s);
   width: var(--button-width, 130px);
   cursor: pointer;
+}
 
-  :focus {
-    outline: none;
-  }
+.card__like-button:focus {
+  outline: none;
+}
 
-  &:focus-visible {
-    outline: none;
-    box-shadow: var(--border-size, 2px) var(--border-size, 2px) 0 0 var(--main-color, #000);
-  }
+.card__like-button:focus-visible {
+  outline: none;
+  box-shadow: var(--border-size, 2px) var(--border-size, 2px) 0 0 var(--main-color, #000);
 }
 
 .save {
@@ -426,11 +421,11 @@
   padding-block: var(--block-padding, 30px);
   padding-inline: var(--inline-padding, 30px);
   background-color: var(--accent-color, #fff);
+}
 
-  &::backdrop {
-    background-color: #000;
-    opacity: var(--pop-up-opacity, 0.75);
-  }
+.dialog::backdrop {
+  background-color: #000;
+  opacity: var(--pop-up-opacity, 0.75);
 }
 
 .dialog-block {

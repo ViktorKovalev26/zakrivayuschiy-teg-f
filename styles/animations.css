@@ -1,21 +1,15 @@
-.theme-menu__button {
-
-  &:disabled {
-
-    &::before {
-      content: '▶';
-      animation: arrow var(--duration-medium, 0.5s) ease-in-out infinite alternate;
-    }
-  }
+.theme-menu__button:disabled::before {
+  content: '▶';
+  animation: arrow var(--duration-medium, 0.5s) ease-in-out infinite alternate;
 }
 
 .like-icon.is-liked .heart {
-  animation: heart var(--duration-fast, 0.3s) calc(var(--duration-fast, 0.3s) * 2 + 0.1s) ease-in;
+  animation: heart var(--duration-fast, 0.3s) 0.1s ease-in;
   transform-origin: 50% 50%;
 }
 
 .like-icon.is-liked .sparks {
-  animation: sparks var(--duration-fast, 0.3s) calc(var(--duration-fast, 0.3s) * 3 + 0.1s) ease-in;
+  animation: sparks var(--duration-fast, 0.3s) var(--duration-fast, 0.3s) ease-in;
 }
 
 @keyframes arrow {
